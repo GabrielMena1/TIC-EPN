@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<robot name="robot4" xmlns:xacro="https://www.ros.org/wiki/xacro" >
+  <gazebo reference="link_chassis">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+ 
+</robot>
+

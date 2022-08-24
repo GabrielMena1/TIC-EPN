@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <param name="robot_description2" command="$(find xacro)/xacro.py '$(find robot_description)/urdf2/robot.xacro'" />
+
+    <arg name="x" default="-8"/>
+    <arg name="y" default="-7"/>
+    <arg name="z" default="0.5"/>
+
+    <node name="mybot_spawn2" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf -param robot_description2 -model robot2 -x $(arg x) -y $(arg y) -z $(arg z)" />
+
+</launch>

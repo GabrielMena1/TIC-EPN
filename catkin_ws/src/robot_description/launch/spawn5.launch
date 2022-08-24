@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <param name="robot_description5" command="$(find xacro)/xacro.py '$(find robot_description)/urdf5/pista.xacro'" />
+
+    <arg name="x" default="-6"/>
+    <arg name="y" default="5"/>
+    <arg name="z" default="0.5"/>
+
+    <node name="mybot_spawn5" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf -param robot_description5 -model robot5 -x $(arg x) -y $(arg y) -z $(arg z)" />
+
+</launch>
